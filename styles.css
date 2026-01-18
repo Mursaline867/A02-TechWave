@@ -43,11 +43,16 @@ a{ color:inherit; text-decoration:none; }
 }
 .logo{
   font-weight:800;
-  font-size:22px;
+  font-size:46px;
   letter-spacing:.3px;
 }
 .logo__white{ color:#fff; }
-.logo__pink{ color: var(--pink); }
+.logo__pink{
+    background:linear-gradient(90deg, #ff2db7, #6e56ff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+ }
 
 .nav{
   display:flex;
@@ -66,14 +71,17 @@ a{ color:inherit; text-decoration:none; }
   border:1px solid rgba(255,255,255,.1);
   background:transparent;
   border-radius:12px;
-  padding:10px;
-  gap:5px;
+  padding:8px;
+  cursor:pointer;
+  transition:.25s ease;
 }
-.hamburger span{
-  display:block;
-  height:2px;
-  background:#fff;
-  opacity:.8;
+.hamburger:hover{
+  background:rgba(255,255,255,.08);
+}
+.hamburger img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
 }
 
 .btn{
@@ -306,7 +314,7 @@ a{ color:inherit; text-decoration:none; }
 
 /* Episodes */
 .fe-section{
-  padding: 70px 0 85px;
+  padding: 70px 0 40px;
   background: radial-gradient(1200px 700px at 50% 10%, #2a0f45 0%, #12061f 60%, #0c0416 100%);
 }
 
@@ -437,7 +445,7 @@ a{ color:inherit; text-decoration:none; }
 
 /* Host */
 .host-section{
-  padding:70px 0;
+  padding:50px 0;
   background:#12061f;
 }
 
