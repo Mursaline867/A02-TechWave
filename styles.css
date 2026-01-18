@@ -531,5 +531,114 @@ a{ color:inherit; text-decoration:none; }
 }
 
 
+/* Footer */
+.tw-footer{
+  position:relative;
+  height:300px;                
+  background:#12061f;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.tw-footer__bg{
+  position:absolute;
+  inset:0;
+  background:url("assets/footer-bg.png") center;
+  opacity:1;
+  pointer-events:none;
+}
+
+.tw-footer__inner{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  width:min(1100px, calc(100% - 40px));
+}
+
+/* Big TechWave */
+.tw-footer__logo{
+  margin:0 0 12px;
+  font-size:64px;
+  font-weight:900;
+  letter-spacing:.2px;
+  line-height:1;
+}
+.tw-footer__logo .w{ color:#fff; }
+.tw-footer__logo .p{
+  background:linear-gradient(90deg, #ff2db7, #6e56ff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+/* Icon row */
+.tw-footer__links{
+  display:flex;
+  gap:26px;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  margin: 10px 0 18px;
+}
+
+.tw-link{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  text-decoration:none;
+  color: rgba(255,255,255,.72);
+  font-size:14px;
+  font-weight:500;
+}
+
+.tw-link img{
+  width:18px;
+  height:18px;
+  opacity:.95;
+}
+
+.tw-link:hover{
+  color:#fff;
+}
+
+/* Copyright */
+.tw-footer__copy{
+  margin:0;
+  font-size:13px;
+  color: rgba(255,255,255,.55);
+}
+
+/* responsive */
+@media (max-width:768px){
+  .tw-footer{ height:320px; }
+  .tw-footer__logo{ font-size:46px; }
+  .tw-link{ font-size:13px; }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+  .nav, .header__cta{ display:none; }
+  .hamburger{ display:flex; flex-direction:column; }
+
+  .hero{ padding-top:45px; }
+  .hero__title{ font-size:34px; }
+  .hero__badge{
+    top:10px;
+    right: 50%;
+    transform: translateX(130px);
+  }
+
+  .stats{ grid-template-columns: repeat(2, 1fr); }
+  .grid-why{ grid-template-columns: 1fr; }
+  .card--tall{ grid-row:auto; }
+  .card--wide{ grid-column:auto; }
+  .episodes{ grid-template-columns: 1fr; }
+  .host{ flex-direction:column; text-align:center; }
+  .hero__bg{ background-size: 900px auto; background-position:center 45px; }
+  .footer__bg{ background-size: 900px auto; }
+}
 
 
