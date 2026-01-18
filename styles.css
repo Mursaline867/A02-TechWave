@@ -1,0 +1,101 @@
+:root{
+  --bg: #10061f;
+  --bg2:#160827;
+  --panel:#220b3a;
+  --card:#2a0f45;
+  --muted: rgba(255,255,255,.65);
+  --muted2: rgba(255,255,255,.45);
+  --white: #fff;
+  --pink:#ff2db7;
+  --green:#2cff7a;
+  --stroke: rgba(255,255,255,.08);
+  --shadow: 0 20px 60px rgba(0,0,0,.45);
+  --radius: 22px;
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 700px at 50% 0%, #2a0f45 0%, #12061f 55%, #0c0416 100%);
+  color: var(--white);
+}
+
+a{ color:inherit; text-decoration:none; }
+.container{
+  width:min(1100px, calc(100% - 40px));
+  margin:0 auto;
+}
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background: linear-gradient(to bottom, rgba(16,6,31,.85), rgba(16,6,31,.35));
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.04);
+}
+.header__inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 0;
+}
+.logo{
+  font-weight:800;
+  font-size:22px;
+  letter-spacing:.3px;
+}
+.logo__white{ color:#fff; }
+.logo__pink{ color: var(--pink); }
+
+.nav{
+  display:flex;
+  gap:28px;
+  font-size:14px;
+  color: rgba(255,255,255,.75);
+}
+.nav a:hover{ color:#fff; }
+
+.header__cta{ font-size:13px; padding:10px 16px; }
+
+.hamburger{
+  display:none;
+  width:40px;
+  height:40px;
+  border:1px solid rgba(255,255,255,.1);
+  background:transparent;
+  border-radius:12px;
+  padding:10px;
+  gap:5px;
+}
+.hamburger span{
+  display:block;
+  height:2px;
+  background:#fff;
+  opacity:.8;
+}
+
+/* Buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:12px 18px;
+  border-radius: 999px;
+  border:1px solid transparent;
+  font-weight:600;
+  font-size:14px;
+  line-height:1;
+}
+.btn--pill{ border-radius: 999px; }
+.btn--gradient{
+  background: linear-gradient(90deg, #ffb800 0%, #ff2db7 55%, #7a5cff 100%);
+  box-shadow: 0 12px 35px rgba(255,45,183,.22);
+}
+.btn--outline{
+  background: rgba(0,0,0,.15);
+  border-color: rgba(46,255,122,.35);
+  color:#bfffe0;
+}
