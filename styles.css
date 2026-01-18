@@ -239,3 +239,41 @@ a{ color:inherit; text-decoration:none; }
     background-size:1400px auto;
   }
 }
+
+/* Sections */
+.section{
+  padding:50px;
+}
+.section__title{
+  text-align:center;
+  font-size:32px;
+  margin:0 0 14px;
+}
+.section__text{
+  text-align:center;
+  max-width:720px;
+  margin:0 auto 20px;
+  color: rgba(255,255,255,.70);
+  font-size:12px;
+  line-height:1.7;
+}
+.section__text--dim{ color: rgba(255,255,255,.55); }
+
+.stats{
+  margin-top:80px;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:18px;
+  text-align:center;
+}
+.stat__value{
+  font-weight:800;
+  color: var(--green);
+  font-size:26px;
+}
+.stat__label{
+  margin-top:6px;
+  font-size:10px;
+  color: rgba(255,255,255,.55);
+  letter-spacing:.8px;
+}
